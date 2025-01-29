@@ -9,7 +9,7 @@ from django.contrib.auth import authenticate, login,logout
 #Function for home page
 def home(request):
     if request.user.is_anonymous:
-        return redirect('reg_login')
+        return redirect('landing_page')
     return render(request,'home.html')
 
 #open/close slider
@@ -20,8 +20,8 @@ def slider(request):
 ###################################################################################################################################################3
 #REGISTER N LOGIN PAGE
 #Function for reh_login page   
-def reg_login(request):
-    return render(request,"reg_login.html")
+def landing_page(request):
+    return render(request,"landing_page.html")
 
 #Function for login page
 def login(request):
@@ -54,3 +54,24 @@ def register(request):
         return render(request,'register.html',{'error':"Passwords do not match"})
     return render(request,'register.html')
 
+###################################################################################################################################################3
+#OFFERS
+def offers(request):
+    return render(request,'offers.html')
+
+###################################################################################################################################################
+#CART
+def cart(request):
+    return render(request,'cart.html')
+
+###################################################################################################################################################
+#MENU
+def menu(request):
+    return render(request,'menu.html')
+
+###################################################################################################################################################
+#OFFERS
+def order_tracking(request):
+    return render(request,'order_tracking.html')
+
+###################################################################################################################################################
