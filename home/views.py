@@ -4,12 +4,21 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login,logout
 
+###################################################################################################################################################3
+#HOME PAGE
 #Function for home page
 def home(request):
     if request.user.is_anonymous:
         return redirect('reg_login')
     return render(request,'home.html')
 
+#open/close slider
+def slider(request):
+    slider_value = 0  # This can be dynamically set from the backend
+    return render(request, 'slider.html', {'slider_value': slider_value})
+
+###################################################################################################################################################3
+#REGISTER N LOGIN PAGE
 #Function for reh_login page   
 def reg_login(request):
     return render(request,"reg_login.html")
