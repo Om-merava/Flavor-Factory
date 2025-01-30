@@ -14,7 +14,7 @@ body {
 /* Left Block */
 .left-block {
   flex: 0 0 60%;
-  background-image: url('img.jpg'); /* Add your image here */
+  background-image: url('landing.jpg'); /* Add your image here */
   background-size: cover; /* Ensures the image covers the entire block */
   background-position: center; /* Centers the image */
   color: white;
@@ -28,7 +28,7 @@ body {
 
 .left-block h1 {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 200px;
   padding-top: 800px;
 }
 
